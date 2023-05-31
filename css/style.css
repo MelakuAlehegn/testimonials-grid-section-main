@@ -34,7 +34,7 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: repeat(4, 250px);
+  grid-template-columns: repeat(4, 16rem);
   grid-gap: 1.5rem;
   margin-bottom: 20px;
 }
@@ -116,9 +116,44 @@ h4 {
   color: hsl(228, 45%, 44%);
 }
 
-@media screen and (max-width: 375) {
+@media screen and (max-width: 375px) {
   main {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  .grid-header div {
+    font-size: larger;
+  }
+
+  .quote,
+  .quote-black {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 376px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  .grid-header div {
+    font-size: larger;
+  }
+
+  .quote,
+  .quote-black {
+    font-size: 20px;
   }
 }
